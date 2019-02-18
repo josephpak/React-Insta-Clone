@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import './Comment.css'
 
 // Each Comment will receive a prop from CommentSection called comment
@@ -16,3 +17,8 @@ const Comment = props => {
 }
 
 export default Comment;
+
+Comment.propTypes = {
+    username: PropTypes.string,
+    text: PropTypes.string
+}

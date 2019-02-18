@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Post.css'
 
 const Post = props => {
@@ -12,6 +13,14 @@ const Post = props => {
             <img className="post-img" src={props.postData.imageUrl}></img>
         </div>
     )
+}
+
+Post.propTypes = {
+    postData: PropTypes.shape({
+        thumbnailUrl: PropTypes.string,
+        username: PropTypes.string,
+        imageUrl: PropTypes.string
+    })
 }
 
 export default Post;
