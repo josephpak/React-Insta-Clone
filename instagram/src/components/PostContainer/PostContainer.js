@@ -1,9 +1,11 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import ActionBar from '../ActionBar/ActionBar';
+import Post from '../Post/Post'
 import './PostContainer.css';
 
-// Each PostContainer receives a prop called postdata from App
-// postdata is an object that represent a single post and its related content/data
+// Each PostContainer receives a prop called postData from App
+// postData is an object that represent a single post and its related content/data
 // Each postData object has the following properties
 // 1. username (string)
 // 2. thumbnailUrl (url)
@@ -15,7 +17,8 @@ import './PostContainer.css';
 const PostContainer = props => {
     return (
         <div className="post-container">
-            <div className="user-content-container"></div>
+            <Post postData={props.postData} />
+            <ActionBar likes={props.postData.likes} />
             <CommentSection comments={props.postData.comments} />
         </div>
     )

@@ -6,6 +6,7 @@
   
   .post-container {
     border: 2px dashed purple;
-    width: 400px;
-    margin: 0 auto;
+    width: 600px;
+    margin: 10px auto;
+    height: 925px;
   }

@@ -1,0 +1,14 @@
+.comment-container {
+    display: flex;
+    width: 100%;
+    border: 1px dotted red;
+}
+
+.comment-username {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.comment-text {
+    font-size: .8rem;
+}

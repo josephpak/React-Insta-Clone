@@ -1,0 +1,24 @@
+.user-content-container {
+    width: 100%;
+}
+
+.user-content-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-username {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.post-thumbnail {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.post-img {
+    max-width: 100%;
+}
+

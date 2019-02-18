@@ -1,0 +1,10 @@
+.likes {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.new-interaction-bar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
