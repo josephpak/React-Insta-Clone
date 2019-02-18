@@ -2,40 +2,40 @@
 
 ## Introduction
 
-- The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
+- [x] The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
 
-  - Here, you'll be implementing a lot of the same concepts that you have been in previous projects, in a very similar fashion.
-  - The main difference this time around is that you'll be using the `create-react-app (CRA)` utility to generate your React project for you.
-  - Don't worry about all of the extra files that you may not understand which will be present inside your React application that you will build with CRA.
-  - The overall structure of the project remains exactly the same as what you worked with in Todo-React.
+  - [x] Here, you'll be implementing a lot of the same concepts that you have been in previous projects, in a very similar fashion.
+  - [x] The main difference this time around is that you'll be using the `create-react-app (CRA)` utility to generate your React project for you.
+  - [x] Don't worry about all of the extra files that you may not understand which will be present inside your React application that you will build with CRA.
+  - [x] The overall structure of the project remains exactly the same as what you worked with in Todo-React.
 
-- This project will be worked on throughout the entire week.
+- [x] This project will be worked on throughout the entire week.
 
-  - Each day as you learn new things, you will use that knowledge to build and enhance this project a little more.
-  - You will use the same repo throughout the whole week, adding more code, and changing things here and there as you learn new principles and techniques.
-  - It will be important to communicate any problems you're having to your Project Manager so that we can make sure to get you un-stuck along the way as soon as possible.
-  - The goal is to finish each day's objectives, and have a working project to start with on the next day.
-  - If you don't get the daily objectives, don't panic, some days will be easier for you than others and some days will be harder.
-  - The hope is that by the end of the week, you'll have seen a react application come to life, and you'll start to see how react works at a higher level.
+  - [x] Each day as you learn new things, you will use that knowledge to build and enhance this project a little more.
+  - [x] You will use the same repo throughout the whole week, adding more code, and changing things here and there as you learn new principles and techniques.
+  - [x] It will be important to communicate any problems you're having to your Project Manager so that we can make sure to get you un-stuck along the way as soon as possible.
+  - [x] The goal is to finish each day's objectives, and have a working project to start with on the next day.
+  - [x] If you don't get the daily objectives, don't panic, some days will be easier for you than others and some days will be harder.
+  - [x] The hope is that by the end of the week, you'll have seen a react application come to life, and you'll start to see how react works at a higher level.
 
-- For this project, you'll be building a simple Instagram clone using React.
-- There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post.
-- Your React application will receive faux post data and render each as a separate Instagram post.
+- [x] For this project, you'll be building a simple Instagram clone using React.
+- [x] There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post.
+- [x] Your React application will receive faux post data and render each as a separate Instagram post.
 
 ## Day I
 
 ### Focus (Day I)
 
-- Demonstrate the the ability to use create-react-app to boilerplate a react application
-- Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
-- Demonstrate the ability to use defaultProps in a React component
+- [x] Demonstrate the the ability to use create-react-app to boilerplate a react application
+- [x] Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
+- [x] Demonstrate the ability to use defaultProps in a React component
 
 ### Project Setup
 
-- If you so choose you may install `create-react-app` globally by running `yarn global add create-react-app`.
-  - If you have CRA installed then run `create-react-app instagram` to create your starter application with the name `instagram`.
-  - If you don't have CRA installed then run `npx create-react-app instagram` to create your starter application with the name `instagram`.
-- Create a `components` directory inside the `src` directory, and then create a sub-directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. You'll also want to put any other components that coincide with your respective container components inside of these directories.
+- [x] If you so choose you may install `create-react-app` globally by running `yarn global add create-react-app`.
+  - [x] If you have CRA installed then run `create-react-app instagram` to create your starter application with the name `instagram`.
+  - [x] If you don't have CRA installed then run `npx create-react-app instagram` to create your starter application with the name `instagram`.
+- [x] Create a `components` directory inside the `src` directory, and then create a sub-directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. You'll also want to put any other components that coincide with your respective container components inside of these directories.
 
 ### Tasks (Day I)
 
