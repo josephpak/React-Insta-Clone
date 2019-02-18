@@ -1,0 +1,11 @@
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .post-container {
+    border: 2px dashed purple;
+    width: 400px;
+    margin: 0 auto;
+  }
