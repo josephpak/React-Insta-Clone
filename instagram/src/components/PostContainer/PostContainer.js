@@ -2,6 +2,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import ActionBar from '../ActionBar/ActionBar';
 import Post from '../Post/Post'
+import CommentInput from '../CommentInput/CommentInput'
 import './PostContainer.css';
 
 // Each PostContainer receives a prop called postData from App
@@ -20,6 +21,7 @@ const PostContainer = props => {
             <Post postData={props.postData} />
             <ActionBar likes={props.postData.likes} />
             <CommentSection comments={props.postData.comments} />
+            <CommentInput />
         </div>
     )
 }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer'
 import './reset.css';
 import './App.css';
+import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar';
 
 // Store dummyData in a state variable called postData
 // dummyData is an array of objects
@@ -22,7 +23,7 @@ class App extends Component {
         <header>
           <div>Image Logo</div>
           <div>Text Logo</div>
-          <div>Search Bar</div>
+          <SearchBar />
           <div>Image</div>
           <div>Image</div>
           <div>Image</div>
