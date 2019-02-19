@@ -1,13 +1,14 @@
 import React from 'react';
 import './ActionBar.css'
 import heart from './like.svg';
+import comment from './comment.png'
 
 const ActionBar = props => {
     return (
         <div className="action-bar-container">
             <div className="new-interaction-bar">
                 <button className="heart"><img  src={heart}></img></button>
-                <div>Comment Icon</div>
+                <button className="comment"><img  src={comment}></img></button>
             </div>
             <p className="likes">{props.likes} likes</p>
         </div>

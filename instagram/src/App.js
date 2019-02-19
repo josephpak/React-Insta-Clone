@@ -6,6 +6,9 @@ import PostContainer from './components/PostContainer/PostContainer'
 import SearchBar from './components/SearchBar/SearchBar';
 import igcamera from './igcamera.svg';
 import iglogo from './iglogo.png';
+import heart from './like.svg';
+import user from './user.png';
+import compass from './compass.png'
 
 // Store dummyData in a state variable called postData
 // dummyData is an array of objects
@@ -29,9 +32,9 @@ class App extends Component {
           </div>
           <SearchBar />
           <div className="header-right">
-            <div>Image</div>
-            <div>Image</div>
-            <div>Image</div>
+            <img className="navigate" src={compass}></img>
+            <img className="likes" src={heart}></img>
+            <img className="user-settings" src={user}></img>
           </div>
         </header>
         <div className="posts-container">
