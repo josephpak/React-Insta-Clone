@@ -1,12 +1,50 @@
 .App {
   font-family: sans-serif;
   box-sizing: border-box;
+}
+
+html {
   font-size: 62.5%;
+}
+
+.text-logo {
+  width: 103px;
+  height: 29px;
+  padding-top: 7px;
+  padding-left: 15px;
+}
+
+.camera-logo {
+  width: 24px;
+  height: 24px;
+  padding-right: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-right: 1px solid black;
 }
 
 header {
   display: flex;
-  border: 2px dashed black;
   width: 100%;
+  height: 71px;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #E9E9E9; 
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 

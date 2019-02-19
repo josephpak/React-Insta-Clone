@@ -1,10 +1,27 @@
 .likes {
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 1.4rem;
+    padding: 5px 20px;
+}
+
+.action-bar-container {
+    padding-top: 10px;
 }
 
 .new-interaction-bar {
     display: flex;
     width: 100%;
     justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.heart img {
+    width: 24px;
+    height: 24px;
+}
+
+.heart {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 0;
 }

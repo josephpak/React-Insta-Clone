@@ -1,0 +1,11 @@
+.search-bar-container {
+    display: flex;
+    height: 18px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.search-bar {
+    margin-top: 51px;
+}

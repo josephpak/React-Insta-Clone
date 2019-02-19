@@ -5,11 +5,13 @@
 .user-content-header {
     display: flex;
     align-items: center;
+    padding: 16px;
 }
 
 .post-username {
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 1.4rem;
+    padding-left: 12px;
 }
 
 .post-thumbnail {

@@ -4,6 +4,8 @@ import './reset.css';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer'
 import SearchBar from './components/SearchBar/SearchBar';
+import igcamera from './igcamera.svg';
+import iglogo from './iglogo.png';
 
 // Store dummyData in a state variable called postData
 // dummyData is an array of objects
@@ -21,12 +23,16 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <div>Image Logo</div>
-          <div>Text Logo</div>
+          <div className="header-left">
+            <img className="camera-logo" src={igcamera}></img>
+            <img className="text-logo" src={iglogo}></img>
+          </div>
           <SearchBar />
-          <div>Image</div>
-          <div>Image</div>
-          <div>Image</div>
+          <div className="header-right">
+            <div>Image</div>
+            <div>Image</div>
+            <div>Image</div>
+          </div>
         </header>
         <div className="posts-container">
           {this.state.postData.map(post => (
