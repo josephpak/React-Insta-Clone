@@ -28,6 +28,16 @@ class App extends Component {
     })
   }
 
+  filterSearch = (e, searchText) => {
+    console.log('fired')
+    e.preventDefault();
+    const filtered = dummyData.filter(post => searchText === post.username)
+    console.log(filtered)
+    console.log(searchText)
+    this.setState({postData: filtered})
+    console.log(this.state.postData)
+  }
+
   render() {
     return (
       <div className="App">
@@ -36,7 +46,9 @@ class App extends Component {
             <img className="camera-logo" alt="camera-icon" src={igcamera}></img>
             <img className="text-logo" alt="text-icon" src={iglogo}></img>
           </div>
-          <SearchBar />
+          <SearchBar 
+          filterSearch={this.filterSearch}
+          />
           <div className="header-right">
             <img className="navigate" alt="navigate" src={compass}></img>
             <img className="likes" alt="likes" src={heart}></img>
