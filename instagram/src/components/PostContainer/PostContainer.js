@@ -16,15 +16,40 @@ import './PostContainer.css';
 // 5. timestamp (string)
 // 6. comments (array of objects)
 
-const PostContainer = props => {
-    return (
-        <div className="post-container">
-            <Post postData={props.postData} />
-            <ActionBar likes={props.postData.likes} />
-            <CommentSection comments={props.postData.comments} />
-            <CommentInput />
-        </div>
-    )
+class PostContainer extends React.Component {
+    constructor(props) {
+        super();
+        this.state = {
+            comments: props.postData.comments
+        }
+    }
+
+    addComment = (e, comment) => {
+        e.preventDefault();
+        if (comment.length > 0){
+            const newComment = {
+                username: "josephjpak",
+                text: comment
+            }
+            this.setState({
+                comments: [...this.state.comments, newComment]
+            })
+        }
+    }
+
+    render() {
+        return (
+            <div className="post-container">
+                <Post postData={this.props.postData} />
+                <ActionBar likes={this.props.postData.likes} />
+                <CommentSection comments={this.state.comments} />
+                <CommentInput 
+                addComment={this.addComment}
+                />
+            </div>
+        )
+    }
+    
 }
 
 PostContainer.propTypes = {

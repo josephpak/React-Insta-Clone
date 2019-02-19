@@ -7,6 +7,7 @@ import './CommentSection.css';
 // comments is an array of objects (each object element is a comment)
 
 const CommentSection = props => {
+
     return (
         <div className="comments-container">
             {props.comments.map((comment, i) => (

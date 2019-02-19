@@ -2,17 +2,17 @@
 
 ### Focus (Day II)
 
-- Understand the concept of React component lifecycles, along with the major lifecycle methods such as `render`, `componentDidMount`.
+- [x] Understand the concept of React component lifecycles, along with the major lifecycle methods such as `render`, `componentDidMount`.
 
 ### Daily Setup (Day II)
 
-- At this point you should have a working app with a component tree that is setup kind of like this (note that this is not a design spec!):
+- [x] At this point you should have a working app with a component tree that is setup kind of like this (note that this is not a design spec!):
 
 <img src='/assets/InstaClone-componentStructure.jpg' width='235' />
 
-- Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
-- Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
-- The props being passed to each component should be typed checked using `propTypes` and `defaultProps`.
+- [x] Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
+- [x] Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
+- [x] The props being passed to each component should be typed checked using `propTypes` and `defaultProps`.
 - The comment section should add a comment to the post
 
 ### Description (Day II)
