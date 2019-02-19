@@ -20,7 +20,8 @@ class PostContainer extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            comments: props.postData.comments
+            comments: props.postData.comments,
+            liked: false
         }
     }
 
@@ -37,11 +38,22 @@ class PostContainer extends React.Component {
         }
     }
 
+    toggleLike = e => {
+        e.preventDefault();
+        this.setState({
+            liked: !this.state.liked
+        })
+    }
+
     render() {
         return (
             <div className="post-container">
                 <Post postData={this.props.postData} />
-                <ActionBar likes={this.props.postData.likes} />
+                <ActionBar 
+                likes={this.props.postData.likes} 
+                liked={this.state.liked}
+                toggleLike={this.toggleLike}
+                />
                 <CommentSection comments={this.state.comments} />
                 <CommentInput 
                 addComment={this.addComment}

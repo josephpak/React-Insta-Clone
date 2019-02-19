@@ -13,13 +13,13 @@
 - [x] Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
 - [x] Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
 - [x] The props being passed to each component should be typed checked using `propTypes` and `defaultProps`.
-- The comment section should add a comment to the post
+- [x] The comment section should add a comment to the post
 
 ### Description (Day II)
 
-- For this part of the project you are going to use React's lifecycle methods to get data and to render the components. Then you will use functions passed as props to build out the functionality more.
-- As data comes into the component, you will set it to the component's state, then pass it down to the child components.
-- Add the functionality to add a comment to any of the posts. Since there is no login page or anything of that sort, hard code a static username.
+- [x] For this part of the project you are going to use React's lifecycle methods to get data and to render the components. Then you will use functions passed as props to build out the functionality more.
+- [x] As data comes into the component, you will set it to the component's state, then pass it down to the child components.
+- [x] Add the functionality to add a comment to any of the posts. Since there is no login page or anything of that sort, hard code a static username.
 - Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly.
 - Get the Search Bar to filter posts by the post's username. When you submit a search term should filter out posts by users whose usernames do not match the search term.
 
