@@ -26,7 +26,7 @@ class PostContainer extends React.Component {
         }
     }
 
-    addComment = (e, comment) => {
+    addNewComment = (e, comment) => {
         e.preventDefault();
         if (comment.length > 0){
             const newComment = {
@@ -66,7 +66,7 @@ class PostContainer extends React.Component {
                 />
                 <CommentSection comments={this.state.comments} />
                 <CommentInput 
-                addComment={this.addComment}
+                addNewComment={this.addNewComment}
                 />
             </div>
         )

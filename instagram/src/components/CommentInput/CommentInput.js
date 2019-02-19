@@ -17,7 +17,7 @@ class CommentInput extends React.Component {
 
     submitComment = e => {
         this.setState({ commentText: '' });
-        this.props.addComment(e, this.state.commentText);
+        this.props.addNewComment(e, this.state.commentText);
     }
     
     render() {
