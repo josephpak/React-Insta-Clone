@@ -21,6 +21,7 @@ class PostContainer extends React.Component {
         super();
         this.state = {
             comments: props.postData.comments,
+            likes: props.postData.likes,
             liked: false
         }
     }
@@ -43,6 +44,15 @@ class PostContainer extends React.Component {
         this.setState({
             liked: !this.state.liked
         })
+        if (!this.state.liked) {
+            this.setState(state => ({
+                likes: state.likes + 1
+            }))
+        } else {
+            this.setState(state => ({
+                likes: state.likes - 1
+            }))
+        }
     }
 
     render() {
@@ -50,7 +60,7 @@ class PostContainer extends React.Component {
             <div className="post-container">
                 <Post postData={this.props.postData} />
                 <ActionBar 
-                likes={this.props.postData.likes} 
+                likes={this.state.likes} 
                 liked={this.state.liked}
                 toggleLike={this.toggleLike}
                 />
