@@ -7,8 +7,8 @@ const ActionBar = props => {
     return (
         <div className="action-bar-container">
             <div className="new-interaction-bar">
-                <button className="heart"><img  src={heart}></img></button>
-                <button className="comment"><img  src={comment}></img></button>
+                <button className="heart"><img alt="like" src={heart}></img></button>
+                <button className="comment"><img alt="comment" src={comment}></img></button>
             </div>
             <p className="likes">{props.likes} likes</p>
         </div>

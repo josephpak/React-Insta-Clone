@@ -32,6 +32,7 @@ header {
   position: fixed;
   background-color: white;
   z-index: 5;
+  padding-right: 100px;
 }
 
 .header-left {
@@ -39,6 +40,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-left: 40px;
 }
 
 .header-right {
@@ -46,6 +48,7 @@ header {
   align-items: center;
   width: 100%;
   justify-content: center;
+  padding-right: 50px;
 }
 
 .navigate {

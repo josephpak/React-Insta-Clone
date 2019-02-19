@@ -27,19 +27,19 @@ class App extends Component {
       <div className="App">
         <header>
           <div className="header-left">
-            <img className="camera-logo" src={igcamera}></img>
-            <img className="text-logo" src={iglogo}></img>
+            <img className="camera-logo" alt="camera-icon" src={igcamera}></img>
+            <img className="text-logo" alt="text-icon" src={iglogo}></img>
           </div>
           <SearchBar />
           <div className="header-right">
-            <img className="navigate" src={compass}></img>
-            <img className="likes" src={heart}></img>
-            <img className="user-settings" src={user}></img>
+            <img className="navigate" alt="navigate" src={compass}></img>
+            <img className="likes" alt="likes" src={heart}></img>
+            <img className="user-settings" alt="user-settings" src={user}></img>
           </div>
         </header>
         <div className="posts-container">
-          {this.state.postData.map(post => (
-            <PostContainer postData={post} />
+          {this.state.postData.map((post, i) => (
+            <PostContainer key={i} postData={post} />
           ))}
         </div>
       </div>

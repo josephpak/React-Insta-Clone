@@ -9,8 +9,8 @@ import './CommentSection.css';
 const CommentSection = props => {
     return (
         <div className="comments-container">
-            {props.comments.map(comment => (
-                <Comment comment={comment} />
+            {props.comments.map((comment, i) => (
+                <Comment key={i} comment={comment} />
             ))}
         </div>
     )
