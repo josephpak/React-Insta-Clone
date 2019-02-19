@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from '../Comment/Comment'
+import PropTypes from 'prop-types';
 import './CommentSection.css';
 
 // Each CommentSection will receive a prop from PostContainer called comments
@@ -13,6 +14,19 @@ const CommentSection = props => {
             ))}
         </div>
     )
+}
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string
+        })
+    )
+}
+
+CommentSection.defaultProps = {
+    comments: []
 }
 
 export default CommentSection;
