@@ -10,10 +10,7 @@ class SearchBar extends React.Component {
     }
 
     handleSearchChange = e => {
-        this.setState({
-            searchText: e.target.value
-        })
-        this.props.filterSearch(e, this.state.searchText)
+        this.setState({ searchText: e.target.value }, () => {this.props.filterSearch(e, this.state.searchText)})
     }
     
     render() {

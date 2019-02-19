@@ -29,13 +29,13 @@ class App extends Component {
   }
 
   filterSearch = (e, searchText) => {
-    console.log('fired')
     e.preventDefault();
     const filtered = dummyData.filter(post => searchText === post.username)
-    console.log(filtered)
-    console.log(searchText)
-    this.setState({postData: filtered})
-    console.log(this.state.postData)
+    if (filtered.length > 0) {
+      this.setState({postData: filtered})
+    } else {
+      this.setState({postData: dummyData})
+    }
   }
 
   render() {
