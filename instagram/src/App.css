@@ -113,3 +113,9 @@ form {
   cursor: pointer;
   font-size: 1.4rem;
 }
+
+.login-panel img {
+  width: 175px;
+  height: 50px;
+  padding: 20px 0;
+}

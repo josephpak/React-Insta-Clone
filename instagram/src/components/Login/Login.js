@@ -1,4 +1,5 @@
 import React from 'react';
+import iglogo from './iglogo.png';
 
 class Login extends React.Component {
     constructor() {
@@ -24,6 +25,7 @@ class Login extends React.Component {
             <div className="login-container">
                 <div className="login-panel">
                     <form onSubmit={this.login}>
+                        <img src={iglogo} />
                         <input 
                         type="text"
                         name="username"
