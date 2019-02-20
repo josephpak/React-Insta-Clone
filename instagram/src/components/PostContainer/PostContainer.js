@@ -22,7 +22,7 @@ class PostContainer extends React.Component {
         this.state = {
             comments: props.postData.comments,
             likes: props.postData.likes,
-            liked: false
+            liked: props.postData.liked
         }
     }
 
@@ -35,7 +35,8 @@ class PostContainer extends React.Component {
             }
             this.setState({
                 comments: [...this.state.comments, newComment]
-            })
+            }, () => this.props.updateComments(this.props.postID, this.state.comments))
+            
         }
     }
 
@@ -43,16 +44,18 @@ class PostContainer extends React.Component {
         e.preventDefault();
         this.setState({
             liked: !this.state.liked
-        })
+        }, () => this.props.updateLiked(this.props.postID, this.state.liked))
+
         if (!this.state.liked) {
-            this.setState(state => ({
-                likes: state.likes + 1
-            }))
+            this.setState({
+                likes: this.state.likes + 1
+            }, () => this.props.updateLikes(this.props.postID, this.state.likes))
         } else {
-            this.setState(state => ({
-                likes: state.likes - 1
-            }))
+            this.setState({
+                likes: this.state.likes - 1
+            }, () => this.props.updateLikes(this.props.postID, this.state.likes))
         }
+        
     }
 
     render() {
@@ -63,6 +66,7 @@ class PostContainer extends React.Component {
                 likes={this.state.likes} 
                 liked={this.state.liked}
                 toggleLike={this.toggleLike}
+                updateLikes={this.props.updateLikes}
                 />
                 <CommentSection comments={this.state.comments} />
                 <CommentInput 
