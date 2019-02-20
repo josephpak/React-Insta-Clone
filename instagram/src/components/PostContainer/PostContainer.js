@@ -30,7 +30,7 @@ class PostContainer extends React.Component {
         e.preventDefault();
         if (comment.length > 0){
             const newComment = {
-                username: "josephjpak",
+                username: localStorage.getItem("username"),
                 text: comment
             }
             this.setState({
