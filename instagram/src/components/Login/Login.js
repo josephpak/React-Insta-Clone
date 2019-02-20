@@ -13,7 +13,7 @@ class Login extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    login = () => {
+    login = e => {
         e.preventDefault();
         localStorage.setItem("username", this.state.username);
         window.location.reload();
@@ -39,3 +39,5 @@ class Login extends React.Component {
         )
     }
 }
+
+export default Login;
