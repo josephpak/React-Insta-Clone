@@ -8,7 +8,8 @@ import igcamera from './igcamera.svg';
 import iglogo from './iglogo.png';
 import heart from './like.svg';
 import user from './user.png';
-import compass from './compass.png'
+import compass from './compass.png';
+import uuidv4 from 'uuid';
 
 // Store dummyData in a state variable called postData
 // dummyData is an array of objects
@@ -24,7 +25,9 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      postData: dummyData
+      postData: dummyData.map(post => (
+        {...post, postID: uuidv4()}
+      ))
     })
   }
 
