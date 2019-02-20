@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './reset.css';
 import './App.css';
-import PostContainer from './components/PostContainer/PostContainer'
-import SearchBar from './components/SearchBar/SearchBar';
-import igcamera from './igcamera.svg';
-import iglogo from './iglogo.png';
-import heart from './like.svg';
-import user from './user.png';
-import compass from './compass.png';
+import PostsPage from './components/PostsPage/PostsPage';
+import authenticate from './components/authentication/authenticate';
 import uuidv4 from 'uuid';
 
 // Store dummyData in a state variable called postData
@@ -77,31 +72,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <div className="header-left">
-            <img className="camera-logo" alt="camera-icon" src={igcamera}></img>
-            <img className="text-logo" alt="text-icon" src={iglogo}></img>
-          </div>
-          <SearchBar 
-          filterSearch={this.filterSearch}
-          />
-          <div className="header-right">
-            <img className="navigate" alt="navigate" src={compass}></img>
-            <img className="likes" alt="likes" src={heart}></img>
-            <img className="user-settings" alt="user-settings" src={user}></img>
-          </div>
-        </header>
-        <div className="posts-container">
-          {this.state.postData.map((post, i) => (
-            <PostContainer 
-            key={i} 
-            postData={post} 
-            postID={post.postID}
-            updateComments={this.updateComments}
-            updateLiked={this.updateLiked}
-            updateLikes={this.updateLikes}/>
-          ))}
-        </div>
+        <PostsPage 
+        filterSearch={this.filterSearch}
+        updateComments={this.updateComments}
+        updateLiked={this.updateLiked}
+        updateLikes={this.updateLikes}
+        postData={this.state.postData}
+        />
       </div>
     );
   }
