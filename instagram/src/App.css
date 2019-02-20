@@ -87,7 +87,7 @@ header {
   justify-content: center;
 }
 
-form {
+.login-panel form {
   display: flex;
   width: 350px;
   flex-direction: column;
