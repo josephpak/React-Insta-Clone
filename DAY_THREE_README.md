@@ -2,18 +2,18 @@
 
 ### Focus (Day III)
 
-- Be able to explain and implement a React Higher Order Component to conditionally render protected content to the screen.
+- [x] Be able to explain and implement a React Higher Order Component to conditionally render protected content to the screen.
 
 ### Daily Setup (Day III)
 
-- To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
-- Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
+- [x] To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
+- [x] Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
 
 ### Description (Day III)
 
-- Today you will be building a "Higher Order Component" (HOC)
-- The HOC will not let users see the posts until they have logged in. (Our login system for this will be faked using LocalStorage).
-- The job of the HOC will be to render a login page if the user is not logged in, then render the posts after the user is logged in.
+- [x] Today you will be building a "Higher Order Component" (HOC)
+- [x] The HOC will not let users see the posts until they have logged in. (Our login system for this will be faked using LocalStorage).
+- [x] The job of the HOC will be to render a login page if the user is not logged in, then render the posts after the user is logged in.
 
 #### Tasks (Day III)
 
