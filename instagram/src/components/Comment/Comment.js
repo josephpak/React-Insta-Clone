@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
+import { Username } from '../Styles/Reusables/Username'
 
 // Each Comment will receive a prop from CommentSection called comment
 // A comment is an object and has the following properties
@@ -23,10 +24,14 @@ const CommentWrapper = styled.div`
     }
 `
 
+const CommentUsername = styled(Username)`
+    font-weight: 550;
+`
+
 const Comment = props => {
     return (
         <CommentWrapper>
-            <h1>{props.comment.username}</h1>
+            <CommentUsername>{props.comment.username}</CommentUsername>
             <p>{props.comment.text}</p>
         </CommentWrapper>
     )
