@@ -6,7 +6,7 @@ import CommentInput from '../CommentInput/CommentInput'
 import PropTypes from 'prop-types';
 import './PostContainer.css';
 
-// Each PostContainer receives a prop called postData from App
+// Each PostContainer receives a prop called post that represents a single 
 // postData is an object that represent a single post and its related content/data
 // Each postData object has the following properties
 // 1. username (string)
@@ -20,9 +20,9 @@ class PostContainer extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            comments: props.postData.comments,
-            likes: props.postData.likes,
-            liked: props.postData.liked
+            comments: props.post.comments,
+            likes: props.post.likes,
+            liked: props.post.liked
         }
     }
 
@@ -68,7 +68,7 @@ class PostContainer extends React.Component {
     render() {
         return (
             <div className="post-container">
-                <Post postData={this.props.postData} />
+                <Post postData={this.props.post} />
                 <ActionBar 
                 likes={this.state.likes} 
                 liked={this.state.liked}
@@ -86,7 +86,7 @@ class PostContainer extends React.Component {
 }
 
 PostContainer.propTypes = {
-    postData: PropTypes.shape({
+    post: PropTypes.shape({
         thumbnailUrl: PropTypes.string,
         username: PropTypes.string,
         imageUrl: PropTypes.string,

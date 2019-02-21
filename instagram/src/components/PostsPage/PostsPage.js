@@ -1,14 +1,14 @@
 import React from 'react';
-import PostContainer from '../PostContainer/PostContainer'
-import SearchBar from '../SearchBar/SearchBar';
-import igcamera from './igcamera.svg';
-import iglogo from './iglogo.png';
-import heart from './like.svg';
-import user from './user.png';
-import compass from './compass.png';
-import uuidv4 from 'uuid';
-import dummyData from './dummy-data';
 
+import PostsContainer from '../PostsContainer/PostsContainer';
+import Header from '../Header/Header'
+
+import dummyData from './dummy-data';
+import uuidv4 from 'uuid';
+
+// PostsPage has access to a prop called postData that represents our initial dummyData array that we receive. We will hydrate our state initially with that data as postData
+// This component thus will serve as our root for application data
+// Pass down the postData array to PostsContainer as a prop called postData and the methods to update the root postData each time a user likes a post or comments on a post
 
 class PostsPage extends React.Component {
     constructor() {
@@ -24,6 +24,16 @@ class PostsPage extends React.Component {
             {...post, postID: uuidv4(), liked: false}
           ))
         })
+      }
+
+      filterSearch = (e, searchText) => {
+        e.preventDefault();
+        const filtered = dummyData.filter(post => searchText === post.username)
+        if (filtered.length > 0) {
+          this.setState({postData: filtered})
+        } else {
+          this.setState({postData: dummyData})
+        }
       }
     
       updateComments = (postID, newComments) => {
@@ -48,49 +58,17 @@ class PostsPage extends React.Component {
         })
       }
     
-      filterSearch = (e, searchText) => {
-        e.preventDefault();
-        const filtered = dummyData.filter(post => searchText === post.username)
-        if (filtered.length > 0) {
-          this.setState({postData: filtered})
-        } else {
-          this.setState({postData: dummyData})
-        }
-      }
-
-      clearLocalStorage = e => {
-        e.preventDefault();
-        localStorage.clear();
-        window.location.reload();
-      };
-    
     render() {
         return (
-            <>
-                <header>
-                <div className="header-left">
-                    <img className="camera-logo" alt="camera-icon" src={igcamera}></img>
-                    <img className="text-logo" alt="text-icon" src={iglogo}></img>
-                </div>
-                <SearchBar 
-                filterSearch={this.filterSearch}
-                />
-                <div className="header-right">
-                    <img className="navigate" alt="navigate" src={compass}></img>
-                    <img className="likes" alt="likes" src={heart}></img>
-                    <button onClick={this.clearLocalStorage}><img className="user-settings" alt="user-settings" src={user}></img></button>
-                </div>
-            </header>
-            <div className="posts-container">
-                {this.state.postData.map((post, i) => (
-                <PostContainer 
-                key={i} 
-                postData={post} 
-                postID={post.postID}
-                updateComments={this.updateComments}
-                updateLikes={this.updateLikes}/>
-                ))}
-            </div>
+          <>
+            <Header
+            filterSearch={this.filterSearch}
+            />
+            <PostsContainer 
+            postData={this.state.postData}
+            updateComments={this.updateComments}
+            updateLikes={this.updateLikes}
+            />
           </>
         )
     }

@@ -2,13 +2,13 @@
 
 ### Focus (Day IV)
 
-- Be able to use styled-components to add functional styles to your React Components
-- Be able to explain why state driven views and components are useful patterns for scalability, composability, and reuse and how React enables those patterns
+- [x] Be able to use styled-components to add functional styles to your React Components
+- [x] Be able to explain why state driven views and components are useful patterns for scalability, composability, and reuse and how React enables those patterns
 
 ### Daily Setup (Day III)
 
-- By now you have been working on laying out your application, adding functionality and even building out a login system that only shows your app if a user is logged in.
-- Today we're going to be adding `styled-components` to our application. For more on the motivation behind this approach watch this [styled-components](https://youtu.be/bIK2NwoK9xk).
+- [x] By now you have been working on laying out your application, adding functionality and even building out a login system that only shows your app if a user is logged in.
+- [x] Today we're going to be adding `styled-components` to our application. For more on the motivation behind this approach watch this [styled-components](https://youtu.be/bIK2NwoK9xk).
 
 #### Tasks (Day III)
 

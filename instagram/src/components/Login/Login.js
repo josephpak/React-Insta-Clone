@@ -25,7 +25,7 @@ class Login extends React.Component {
             <div className="login-container">
                 <div className="login-panel">
                     <form onSubmit={this.login}>
-                        <img src={iglogo} />
+                        <img src={iglogo} alt="logo"/>
                         <input 
                         type="text"
                         name="username"
