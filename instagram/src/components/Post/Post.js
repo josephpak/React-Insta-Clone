@@ -1,17 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Post.css'
+import styled from 'styled-components';
+
+const PostWrapper = styled.div`
+    width: 100%;
+
+    .user-content-header {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+
+        img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 1.4rem;
+            padding-left: 12px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+`
 
 const Post = props => {
     return (
-        <div className="user-content-container">
+        <PostWrapper>
             <div className="user-content-header">
-                <img className="post-thumbnail" alt="user-profile" src={props.postData.thumbnailUrl}></img>
-                <h1 className="post-username">{props.postData.username}</h1>
+                <img alt="user-profile" src={props.postData.thumbnailUrl}></img>
+                <h1>{props.postData.username}</h1>
             </div>
             
-            <img className="post-img" alt="post" src={props.postData.imageUrl}></img>
-        </div>
+            <img alt="post" src={props.postData.imageUrl}></img>
+        </PostWrapper>
     )
 }
 

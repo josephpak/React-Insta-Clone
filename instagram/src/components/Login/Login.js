@@ -1,6 +1,6 @@
 import React from 'react';
 import iglogo from './iglogo.png';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const LoginWrapper = styled.div`
     max-width: 100%;

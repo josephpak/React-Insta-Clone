@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import igcamera from './igcamera.svg';
 import iglogo from './iglogo.png';
@@ -85,7 +85,6 @@ const HeaderWrapper = styled.header`
 class Header extends React.Component {
 
     handleSearch = (e, searchText) => {
-        e.preventDefault();
         this.props.filterSearch(e, searchText)
     }
 

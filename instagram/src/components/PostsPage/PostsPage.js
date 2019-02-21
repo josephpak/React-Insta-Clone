@@ -27,7 +27,6 @@ class PostsPage extends React.Component {
       }
 
       filterSearch = (e, searchText) => {
-        e.preventDefault();
         const filtered = dummyData.filter(post => searchText === post.username)
         if (filtered.length > 0) {
           this.setState({postData: filtered})
