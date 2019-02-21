@@ -1,5 +1,29 @@
 import React from 'react';
-import './SearchBar.css'
+import styled, { css } from 'styled-components';
+
+const SearchWrapper = styled.form`
+    display: flex;
+    height: 18px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+    input {
+        margin-top: 51px;
+        text-align: center;
+        outline: none;
+        padding: 7px 35px;
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 3px;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    input:focus {
+        outline: none;
+        text-align: left;
+    }
+`
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -15,17 +39,14 @@ class SearchBar extends React.Component {
     
     render() {
         return (
-            <form 
-            className="search-bar-container"
-            >
+            <SearchWrapper>
                 <input 
-                className="search-bar" 
                 type="text" 
                 placeholder="Search.."
                 value={this.state.searchText}
                 onChange={this.handleSearchChange}
                 ></input>
-            </form>
+            </SearchWrapper>
         )
     }
 }
