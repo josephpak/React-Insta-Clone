@@ -46,23 +46,14 @@ class PostContainer extends React.Component {
             this.setState(prevState => ({
                 likes: prevState.likes + 1
             }), () => {
-                this.props.updateLikes(this.props.postID, this.state.likes)
+                this.props.updateLikes(this.props.postID, this.state.likes, this.state.liked)
                 })
         } else {
             this.setState(prevState => ({
                 likes: prevState.likes - 1
             }), () => {
-                this.props.updateLikes(this.props.postID, this.state.likes)
+                this.props.updateLikes(this.props.postID, this.state.likes, this.state.liked)
             })
-        }
-        this.updatesLikedState();
-    }
-
-    updatesLikedState = e => {
-        if (!this.state.liked) {
-            this.props.updateLiked(this.props.postID, this.state.liked)
-        } else {       
-            this.props.updateLiked(this.props.postID, this.state.liked)
         }
     }
 

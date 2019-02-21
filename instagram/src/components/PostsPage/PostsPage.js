@@ -37,22 +37,11 @@ class PostsPage extends React.Component {
         })
       }
     
-      updateLikes = (postID, newLikes) => {
+      updateLikes = (postID, newLikes, newLiked) => {
         this.setState({
           postData: this.state.postData.map(post => {
             if (post.postID === postID) {
-              return {...post, likes: newLikes}
-            }
-            return post;
-          })
-        })
-      }
-    
-      updateLiked = (postID, newLiked) => {
-        this.setState({
-          postData: this.state.postData.map(post => {
-            if (post.postID === postID) {
-              return {...post, liked: newLiked}
+              return {...post, likes: newLikes, liked: newLiked}
             }
             return post;
           })
@@ -99,7 +88,6 @@ class PostsPage extends React.Component {
                 postData={post} 
                 postID={post.postID}
                 updateComments={this.updateComments}
-                updateLiked={this.updateLiked}
                 updateLikes={this.updateLikes}/>
                 ))}
             </div>
