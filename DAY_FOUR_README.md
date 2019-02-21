@@ -17,7 +17,7 @@
 - [] Re-factor `SearchBar` to use `styled-components`.
 - Create a `Header` styled-component.header that wraps your entire SearchBar.
 
-  - We recommend working left to right so begin changing out your styles on the instagram logo.
+  - [] We recommend working left to right so begin changing out your styles on the instagram logo.
   - Create a `LogoHeader` styled-component.div
   - Create a `LogoImage` styled-component.img that fills in the background of your
 
