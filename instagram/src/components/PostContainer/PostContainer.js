@@ -4,7 +4,7 @@ import ActionBar from '../ActionBar/ActionBar';
 import Post from '../Post/Post'
 import CommentInput from '../CommentInput/CommentInput'
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+import styled from 'styled-components';
 
 // Each PostContainer receives a prop called post that represents a single 
 // postData is an object that represent a single post and its related content/data
@@ -15,6 +15,16 @@ import './PostContainer.css';
 // 4. likes (integer)
 // 5. timestamp (string)
 // 6. comments (array of objects)
+
+const PostContainerWrapper = styled.div`
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 3px;
+    max-width: 600px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+`
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -67,7 +77,7 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-            <div className="post-container">
+            <PostContainerWrapper>
                 <Post postData={this.props.post} />
                 <ActionBar 
                 likes={this.state.likes} 
@@ -79,7 +89,7 @@ class PostContainer extends React.Component {
                 <CommentInput 
                 addNewComment={this.addNewComment}
                 />
-            </div>
+            </PostContainerWrapper>
         )
     }
     

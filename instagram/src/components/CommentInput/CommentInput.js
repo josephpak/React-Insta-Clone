@@ -1,5 +1,25 @@
 import React from 'react';
-import './CommentInput.css';
+import styled from 'styled-components';
+
+const AddCommentWrapper = styled.div`
+    padding: 0 20px;
+    justify-self: flex-end;
+
+    input {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: rgb(38, 38, 38);
+        flex-grow: 1;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        resize: none;
+        outline: none;
+        border: none;
+        border-top: 1px solid rgb(230, 230, 230);
+        padding: 20px 0;
+    }   
+`
 
 class CommentInput extends React.Component {
     constructor() {
@@ -22,17 +42,16 @@ class CommentInput extends React.Component {
     
     render() {
         return (
-            <div className="comment-input-container">
+            <AddCommentWrapper>
                 <form onSubmit={this.submitComment}>
                     <input 
-                    className="add-comment-input" 
                     type="text" 
                     placeholder="Add a comment..."
                     value={this.state.commentText}
                     onChange={this.handleChange}
                     ></input>
                 </form>
-            </div>
+            </AddCommentWrapper>
         )
     };
     
