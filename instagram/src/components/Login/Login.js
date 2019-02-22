@@ -21,6 +21,13 @@ const LoginWrapper = styled.div`
     input {
         border: none;
         width: 350px;
+        outline: none;
+        font-size: 1.2rem;
+        padding: 20px 0;
+
+        &:active {
+            outline: none;
+        }
     }
 
     button {
