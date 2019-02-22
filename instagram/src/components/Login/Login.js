@@ -80,7 +80,7 @@ class Login extends React.Component {
                         placeholder="Username"
                         />
                         <input 
-                        type="text"
+                        type="password"
                         name="password"
                         onChange={this.handleInput}
                         placeholder="Password"
